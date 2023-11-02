@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poco F2 Pro</title>
+    <!-- <script src="https://kit.fontawesome.com/742bc75967.js" crossorigin="anonymous"></script> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .main {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to right, #a7aae2, #dae3daeb);
+      }
+
+      nav {
+        width: 90%;
+        position: sticky;
+        margin: 20px auto;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        flex-basis: 20%;
+      }
+
+      .logo img {
+        width: 100px;
+      }
+
+      .nav-links {
+        flex: 1;
+        text-align: right;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+      }
+
+      .nav-links ul li a {
+        color: rgb(104, 73, 73);
+        text-decoration: none;
+        padding: 5px;
+      }
+
+      .information {
+        width: 1000px;
+        height: 1000px;
+        position: absolute;
+        top: 50%;
+        left: -18%;
+        transform: translateY(-50%);
+      }
+
+      #circle {
+        width: 1000px;
+        height: 1000px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        transform: rotate(0deg);
+        transition: 1s;
+      }
+
+      .feature {
+        position: absolute;
+        display: flex;
+        color: rgb(255, 255, 255);
+      }
+
+      .feature div {
+        margin-left: 20px;
+      }
+
+      .feature div p {
+        margin-top: 8px;
+      }
+      .one {
+        top: 450px;
+        right: 50px;
+      }
+
+      .two {
+        top: 150px;
+        left: 400px;
+        transform: rotate(-90deg);
+      }
+
+      .three {
+        bottom: 450px;
+        left: 50px;
+        transform: rotate(-180deg);
+      }
+
+      .four {
+        bottom: 150px;
+        right: 400px;
+        transform: rotate(-270deg);
+      }
+
+      .mobile {
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+
+      
+
+
+      .controls {
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+
+      .controls h3 {
+        margin: 15px 0;
+        color: black;
+      }
+
+      #upBtn {
+        width: 15px;
+        cursor: pointer;
+      }
+
+      #downBtn {
+        width: 15px;
+        cursor: pointer;
+        transform: rotate(180deg);
+      }
+
+      #downBtn:active {
+        width: 18px;
+        cursor: pointer;
+      }
+
+      #upBtn:active {
+        width: 18px;
+        cursor: pointer;
+      }
+
+      .overlay {
+        width: 0;
+        height: 0;
+        border-top: 500px solid white;
+        border-right: 500px solid rgb(63, 76, 76);
+        border-bottom: 500px solid white;
+        border-left: 500px solid white;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .downarrow {
+        width: 15px;
+        cursor: pointer;
+        float: inherit;
+      }
+
+      .allfeatures {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        /* margin: 10px; */
+        background-color: gainsboro;
+      }
+
+      #fea-btn {
+        outline: none;
+        border: none;
+        background-color: red;
+        color: rgb(255, 255, 255);
+        padding: 8px;
+        margin: 2px;
+        width: auto;
+        font-size: medium;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      #fea-btn:hover {
+        outline: none;
+        border: none;
+        background-color: blueviolet;
+        color: white;
+        padding: 8px;
+        margin: 2px;
+        width: auto;
+        font-size: medium;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-weight: 600;
+        cursor: pointer;
+        word-spacing: 2px;
+      }
+
+      .des {
+        margin: 8px;
+      }
+
+      .nav-links ul li a:hover {
+        background-color: gray;
+        color: white;
+        padding: 5px;
+      }
+
+      .mobile:hover {
+        width: 700px;
+        position: relative;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="Poco logo.png" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="poco f2 pro.png" class="mobile" />
+
+
+        <div id="circle">
+          <div class="feature one">
+            <div>
+              <h1>Battery</h1>
+              <p>5000 mAh, Long lasting battery</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <div>
+              <h1>camera</h1>
+              <p>48MP, Quad camera</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <div>
+              <h1>Dispaly</h1>
+              <p>6.67", IPS dispaly</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <div>
+              <h1>Processor</h1>
+              <p>Snapdragon 720G</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="up arrow.png" id="upBtn" />
+        <h3>Features</h3>
+        <img src="up arrow.png" id="downBtn" />
+      </div>
+    </div>
+    <div class="allfeatures">
+      <button id="fea-btn" type="submit">Click me to know all features</button>
+      <p class="des">
+        This button will redirect you to <b>POCO official website</b>
+      </p>
+      <!-- <h3>All features</h3> -->
+      <!-- <img class="downarrow" src="down arrow.png"/> -->
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+
+      document.getElementById("fea-btn").addEventListener("click", function () {
+        window.location.href = "https://www.po.co/global/poco-f2-pro/specs";
+      });
+    </script>
+  </body>
+</html>
